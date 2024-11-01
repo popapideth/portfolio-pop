@@ -1,0 +1,124 @@
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 1.8rem;
+    justify-content: center;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.portfolio_filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter_button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter_button.active {
+  background-color: var(--title-color-dark);
+  color: var(--container-color);
+}
+
+.portfolio_button {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.portfolio_button-icon {
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.portfolio_button:hover .portfolio_button-icon {
+    transform: translateX(00.25rem);
+}
+
+
+.portfolio_card {
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.portfolio_img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.portfolio_title {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+
+/* Breakpoint */
+/* For large devices */
+@media screen and (max-width: 992px){
+  .portfolio_container {
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 1rem;
+  }
+}
+/* For medium devices */
+@media screen and (max-width: 768px){
+  .portfolio_container {
+      grid-template-columns: repeat(2,1fr);
+      margin: 0 15px 0;
+  }
+
+  .portfolio_title {
+    font-size: 1rem;
+  }
+
+  .portfolio_filters {
+    column-gap: 0.5rem;
+  }
+
+  .filter_button {
+    padding: 0.5rem 0.5rem;
+  }
+  
+}
+@media screen and (max-width: 576px){
+  
+}
+/* For small devices */
+@media screen and (max-width: 350px){
+  .portfolio_container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio_filters {
+    column-gap: 0.5rem;
+  }
+  .portfolio_title {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .portfolio_card {
+    margin: 0;
+  }
+
+  .filter_button {
+    padding: 0.5rem 0.5rem;
+    font-size: var(--small-font-size);
+  }
+}
